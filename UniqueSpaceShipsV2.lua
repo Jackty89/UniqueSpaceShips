@@ -115,7 +115,7 @@ NMS_MOD_DEFINITION_CONTAINER =
     }
 }
 
-local ChangesToInventoryTable = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"][1]["EXML_CHANGE_TABLE"]
+local ChangesToInventoryTable = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"][2]["EXML_CHANGE_TABLE"]
 
 for i = 1, #Shipchanges do
 	-- local ChangesToInventoryTable_temp
@@ -132,7 +132,7 @@ for i = 1, #Shipchanges do
 			{
 				["PRECEDING_FIRST"] = "TRUE",
 				["MATH_OPERATION"] = "*", -- "*", "+", "-", "/" or leave empty for normal replacement
-				["PRECEDING_KEY_WORDS"] = {"ShipBaseStatsData", ShipType,"BaseStatsPerClass",Class[j]},
+				["PRECEDING_KEY_WORDS"] = {"ShipBaseStatsData", ShipType,"BaseStatsPerClass",Class[k]},
 				["SPECIAL_KEY_WORDS"] = {"BaseStatID", StatID},
 				["VALUE_CHANGE_TABLE"] 	=
 				{
