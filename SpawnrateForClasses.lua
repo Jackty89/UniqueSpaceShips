@@ -1,6 +1,8 @@
-GameVersion = "3_80"
+GameVersion = "3_81"
 ModeName = "SpawnrateForClasses"
 Author = "Jackty89"
+
+InventoryTablePath = "METADATA\\REALITY\\TABLES\\INVENTORYTABLE.MBIN"
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
@@ -14,7 +16,7 @@ NMS_MOD_DEFINITION_CONTAINER =
 			["MBIN_CHANGE_TABLE"] 	=
 			{
 				{
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\INVENTORYTABLE.MBIN",
+					["MBIN_FILE_SOURCE"] 	= InventoryTablePath,
 					["EXML_CHANGE_TABLE"] 	=
 					{
                         --General Ship Spawn changes for sytsems - 1 Star still has 0% chance

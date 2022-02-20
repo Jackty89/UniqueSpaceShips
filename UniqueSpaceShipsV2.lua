@@ -1,6 +1,9 @@
-GameVersion = "3_80"
+GameVersion = "3_81"
 ModeName = "UniqueSpaceShips"
 Author = "Jackty89"
+
+SpaceShipGlobalsPath = "GCSPACESHIPGLOBALS.GLOBAL.MBIN"
+InventoryTablePath = "METADATA\\REALITY\\TABLES\\INVENTORYTABLE.MBIN"
 
 ShuttleTakeOffReductionMultiplier = "0.75" -- Reduction of 25% for the base-value
 
@@ -22,13 +25,7 @@ FreighterB = "6"
 FreighterA = "7"
 FreighterS = "8"
 
-Class =
-{
-	"C",
-	"B",
-	"A",
-	"S"
-}
+Class = {"C", "B", "A", "S"}
 Shipchanges =
 {
 	{
@@ -90,14 +87,15 @@ NMS_MOD_DEFINITION_CONTAINER =
 			["MBIN_CHANGE_TABLE"] 	=
 			{
 				{
-					["MBIN_FILE_SOURCE"] 	= "GCSPACESHIPGLOBALS.GLOBAL.MBIN",
+					["MBIN_FILE_SOURCE"] 	= SpaceShipGlobalsPath,
 					["EXML_CHANGE_TABLE"] 	=
 					{
 						{
 							--Reduce launch cost for Shuttle
+							["MATH_OPERATION"] = "*",
 							["VALUE_CHANGE_TABLE"] 	=
 							{
-								{"ShuttleTakeOffMod",	"0.10"}	-- Original 0.66 => 25% * 0.66 = 16.5% launch cost - Mod 25% * 0.10 = 2.5%
+								{"ShuttleTakeOffMod",	ShuttleTakeOffReductionMultiplier}	-- Original 0.66 => 25% * 0.66 = 16.5% launch cost - Mod 25% * 0.10 = 2.5%
 							}
 						}
 
@@ -105,7 +103,7 @@ NMS_MOD_DEFINITION_CONTAINER =
 
 				},
 				{
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\INVENTORYTABLE.MBIN",
+					["MBIN_FILE_SOURCE"] 	= InventoryTablePath,
 					["EXML_CHANGE_TABLE"] 	=
 					{
 					}
