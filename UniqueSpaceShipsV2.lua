@@ -39,6 +39,7 @@ Shipchanges =
 			{"Fighter", MedVale, MedHighValue, HighValue, HighExtrValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
+			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
 		}
 	},
 	{
@@ -51,6 +52,7 @@ Shipchanges =
 			{"Fighter", MedHighValue,HighValue,HighExtrValue,ExtremeValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
+			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
 		}
 	},
 	{
@@ -63,6 +65,7 @@ Shipchanges =
 			{"Fighter", LowValue, LowMedValue, MedVale, MedHighValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
+			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
 		}
 	},
 	{
@@ -98,9 +101,7 @@ NMS_MOD_DEFINITION_CONTAINER =
 								{"ShuttleTakeOffMod",	ShuttleTakeOffReductionMultiplier}	-- Original 0.66 => 25% * 0.66 = 16.5% launch cost - Mod 25% * 0.10 = 2.5%
 							}
 						}
-
 					}
-
 				},
 				{
 					["MBIN_FILE_SOURCE"] 	= InventoryTablePath,
