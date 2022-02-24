@@ -39,7 +39,7 @@ Shipchanges =
 			{"Fighter", MedVale, MedHighValue, HighValue, HighExtrValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
-			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
+			{"Alien", "", "", "", HighValue}
 		}
 	},
 	{
@@ -52,7 +52,7 @@ Shipchanges =
 			{"Fighter", MedHighValue,HighValue,HighExtrValue,ExtremeValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
-			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
+			{"Alien", "", "", "", HighValue}
 		}
 	},
 	{
@@ -65,7 +65,7 @@ Shipchanges =
 			{"Fighter", LowValue, LowMedValue, MedVale, MedHighValue},
 			{"Shuttle", NormalValue, LowValue, LowMedValue, MedVale},
 			{"Royal", LowMedValue, MedVale, MedHighValue, HighValue},
-			{"Alien", LowMedValue, MedVale, MedHighValue, HighValue}
+			{"Alien", "", "", "", HighValue}
 		}
 	},
 	{
@@ -125,12 +125,16 @@ for i = 1, #Shipchanges do
 		local ShipType = ShipTypes[j][1]
 		local Modifier
 		for k = 1, #Class do
+			if ShipType == "Alien" then
+				k = #Class
+			end
 
 			Modifier = ShipTypes[j][k+1]
 			ChangesToInventoryTable_temp =
 			{
 				["PRECEDING_FIRST"] = "TRUE",
 				["MATH_OPERATION"] = "*", -- "*", "+", "-", "/" or leave empty for normal replacement
+				["INTEGER_TO_FLOAT"] = "FORCE",
 				["PRECEDING_KEY_WORDS"] = {"ShipBaseStatsData", ShipType,"BaseStatsPerClass",Class[k]},
 				["SPECIAL_KEY_WORDS"] = {"BaseStatID", StatID},
 				["VALUE_CHANGE_TABLE"] 	=
