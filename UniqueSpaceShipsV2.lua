@@ -2,7 +2,7 @@ ModeName = "UniqueSpaceShips"
 Author = "Jackty89"
 
 SpaceShipGlobalsPath = "GCSPACESHIPGLOBALS.GLOBAL.MBIN"
-InventoryTablePath = "METADATA\\REALITY\\TABLES\\INVENTORYTABLE.MBIN"
+InventoryTablePath = "METADATA/REALITY/TABLES/INVENTORYTABLE.MBIN"
 
 ShuttleTakeOffReductionMultiplier = "0.75" -- Reduction of 25% for the base-value
 
